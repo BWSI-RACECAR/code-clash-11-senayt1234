@@ -51,7 +51,7 @@ class Solution:
                  index = index+1
             if output == 0:
                  return 1 
-            if arr == lis:
+            if arr is lis:
                 return 4
                  
             return output+1
