@@ -47,6 +47,7 @@ class Solution:
             while len(arr)-1>index:
                  if arr[index+1]-arr[index]>0:
                        output = output+1
+                 index = index+1
             if output == 0:
                  return 1  
                  
