@@ -26,7 +26,6 @@ take an array of integers as input and return the length of the longest increasi
 subsequence.
 
 
-
 Test Cases: 
 Input: [9, 7, 5, 3, 1] Output: 1
 
@@ -38,24 +37,14 @@ Input: [3, 1, 4, 1, 5, 9, 2, 6, 5], Output: 4
 """
 class Solution:
     def find_longest_increasing_subsequence(self, arr):
-            #type arr: list of int
-            #return type: int
-            
-            #TODO: Write code below to return an int with the solution to the prompt.
-            lis = [3, 1, 4, 1, 5, 9, 2, 6, 5]
-            output = 0
-            index = 0 
-            while len(arr)-1>index:
-                 if arr[index+1]-arr[index]>0:
-                       output = output+1
-                 index = index+1
-            if output == 0:
-                 return 1 
-            if arr is lis:
-                return 4
-                 
-            return output+1
-
+            arr.sort()
+            max = 1
+            for i in range(len(arr)-1):
+                print(arr[i])
+                if arr[i] == arr[i+1]-1:
+                    max += 1
+            return max
+        
 def main():
     array = input().split(" ")
     for x in range (0, len(array)):
